@@ -2,11 +2,11 @@ import https from "node:https";
 import fs from "node:fs";
 import path from "node:path";
 
-interface Holiday {
+export interface Holiday {
   name: string;
   date: string;
 }
-interface HolidayDetails extends Holiday {
+export interface HolidayDetails extends Holiday {
   daysUntil: number | string;
   onWeekend: string;
 }
@@ -99,5 +99,5 @@ export async function createCSVFile(countryCode: string) {
   });
 }
 
-const countryCode = "AU";
+const countryCode = "AT";
 createCSVFile(countryCode);
