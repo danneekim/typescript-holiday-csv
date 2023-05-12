@@ -23,7 +23,7 @@ This project can be installed as a third party dependency via npm
 
 ## Extra Points
 
-- [ ] Allow users to choose a country for public holiday listings. (**WIP**)
+- [~] Allow users to choose a country for public holiday listings. (**WIP**)
 - [ ] Consider how to run the script behind a corporate proxy server.
 - [ ] Include additional unit tests
 - [ ] Include more extensive error handling
