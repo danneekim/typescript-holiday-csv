@@ -1,4 +1,22 @@
-Name,Age,Email,Hobby
-John,30,john@example.com,gym
-Jane,25,jane@example.com,reading
-Bob,35,bob@example.com,coding
+Name,Date,Days Until,Weekend
+New Year's Day,2023-01-01,,Yes
+Australia Day,2023-01-26,,Yes
+Labour Day,2023-03-06,,Yes
+Canberra Day,2023-03-13,,Yes
+March Public Holiday,2023-03-13,,Yes
+Eight Hours Day,2023-03-13,,Yes
+Labour Day,2023-03-13,,Yes
+Good Friday,2023-04-07,,Yes
+Holy Saturday,2023-04-08,,Yes
+Easter Sunday,2023-04-09,,Yes
+Easter Monday,2023-04-10,,Yes
+Anzac Day,2023-04-25,,Yes
+May Day,2023-05-01,,Yes
+Labour Day,2023-05-01,,Yes
+Reconciliation Day,2023-05-29,,Yes
+Western Australia Day,2023-06-05,,Yes
+King's Birthday,2023-06-12,,Yes
+Picnic Day,2023-08-07,,Yes
+Labour Day,2023-10-02,,Yes
+Christmas Day,2023-12-25,,Yes
+St. Stephen's Day,2023-12-26,,Yes

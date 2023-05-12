@@ -6,6 +6,10 @@ interface Holiday {
   name: string;
   date: string;
 }
+interface HolidayDetails extends Holiday {
+  daysUntil: number | string;
+  onWeekend: string;
+}
 
 const baseUrl = "https://date.nager.at/api/v3";
 const countryCode = "AU";
@@ -41,23 +45,44 @@ function getPublicHolidays(
   });
 }
 
-const holidays = getPublicHolidays("AU");
+async function createCSVFile() {
+  const holidays = await getPublicHolidays("AU");
 
-function createCSVFile() {
-  const data = [
-    ["Name", "Age", "Email", "Hobby"],
-    ["John", "30", "john@example.com", "gym"],
-    ["Jane", "25", "jane@example.com", "reading"],
-    ["Bob", "35", "bob@example.com", "coding"],
+  const holidayDetails: HolidayDetails[] = holidays.map((holiday) => {
+    const now = new Date();
+    const date = new Date(holiday.date);
+    const timeDiff = date.getTime() - now.getTime();
+
+    // TODO: calculate days until future holiday
+    // TODO: calculate holiday falls on weekend
+
+    let row: HolidayDetails = {
+      name: holiday.name,
+      date: holiday.date,
+      daysUntil: "",
+      onWeekend: "Yes",
+    };
+    return row;
+  });
+
+  // convert to 2d array
+  const csvRows = [
+    ["Name", "Date", "Days Until", "Weekend"],
+    ...holidayDetails.map((holiday) => [
+      holiday.name,
+      holiday.date,
+      holiday.daysUntil,
+      holiday.onWeekend,
+    ]),
   ];
-  // format data
-  const csv = data.map((row) => row.join(",")).join("\n");
-  console.log("formatted data:\n", csv + "\n");
+
+  // stringify data
+  const csvData: string = csvRows.map((row) => row.join(",")).join("\n");
   const folderPath = "csv/";
   const fileName = "data.csv";
   const filePath = path.join(folderPath, fileName);
 
-  // create a csv directory
+  // create csv directory
   fs.mkdir(folderPath, (error) => {
     if (error?.code === "EEXIST" || !error) {
       console.log("Successfully created csv directory..\n");
@@ -65,8 +90,9 @@ function createCSVFile() {
       console.error("Error creating csv directory..", error);
     }
   });
-  // create a csv file
-  fs.writeFile(filePath, csv, (error) => {
+
+  // create csv file
+  fs.writeFile(filePath, csvData, (error) => {
     if (error) {
       console.error(error);
     } else {
