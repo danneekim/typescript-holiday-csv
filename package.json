@@ -1,6 +1,6 @@
 {
   "name": "typescript-holiday-csv",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "This is a Typescript script that generates a CSV file listing all the public holidays in a country, using data from the public API at https://date.nager.at/.",
   "main": "dist/index.js",
   "type": "module",
@@ -10,7 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "mkdir -p dist && tsc && node dist/index.js",
-    "build-test": "npm run build && cd ./dist && sudo npm link",
+    "build-link": "npm run build && cd ./dist && sudo npm link",
     "main": "npm run build && npm publish"
   },
   "keywords": [],

@@ -80,8 +80,10 @@ export async function createCSVFile(countryCode: string) {
 
   // create directory
   fs.mkdir(folderPath, (error) => {
-    if (error?.code === "EEXIST" || !error) {
+    if (!error) {
       console.log("Creating a csv directory...\n");
+    } else if (error?.code === "EEXIST") {
+      return;
     } else {
       console.error("Error creating csv directory...", error);
     }
