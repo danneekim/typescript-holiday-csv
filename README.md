@@ -7,6 +7,14 @@ This project can be installed as a third party dependency via npm
 >```js
 > npm i typescript-holiday-csv
 > ```
+ 
+All named functions and type interfaces can be imported:
+> ```
+> import { createCSVFile, getPublicHolidays } from "typescript-holiday-csv";
+> 
+> // create CSV file of holidays in United States
+> createCSVFile("US");
+> ```
 
 ## Requirements
 
@@ -23,7 +31,7 @@ This project can be installed as a third party dependency via npm
 
 ## Extra Points
 
-- [~] Allow users to choose a country for public holiday listings. (**WIP**)
+- [x] Allow users to choose a country for public holiday listings. (**WIP**)
 - [ ] Consider how to run the script behind a corporate proxy server.
 - [ ] Include additional unit tests
 - [ ] Include more extensive error handling
@@ -39,7 +47,7 @@ npm install
 
 #### **`npm run main`**: <br>
 > will create a **`csv/`** folder at the project's root directory.<br>
-> by default, generate a CSV file with information related to Austria's (AU) public holidays.<br>
+> by default, generate a CSV file with information related to Austria's (AT) public holidays.<br>
 
 
 # API Reference
