@@ -1,22 +1,22 @@
 Name,Date,Days Until,Weekend
 New Year's Day,2023-01-01,,Yes
-Australia Day,2023-01-26,,Yes
-Labour Day,2023-03-06,,Yes
-Canberra Day,2023-03-13,,Yes
-March Public Holiday,2023-03-13,,Yes
-Eight Hours Day,2023-03-13,,Yes
-Labour Day,2023-03-13,,Yes
-Good Friday,2023-04-07,,Yes
+Australia Day,2023-01-26,,No
+Labour Day,2023-03-06,,No
+Canberra Day,2023-03-13,,No
+March Public Holiday,2023-03-13,,No
+Eight Hours Day,2023-03-13,,No
+Labour Day,2023-03-13,,No
+Good Friday,2023-04-07,,No
 Holy Saturday,2023-04-08,,Yes
 Easter Sunday,2023-04-09,,Yes
-Easter Monday,2023-04-10,,Yes
-Anzac Day,2023-04-25,,Yes
-May Day,2023-05-01,,Yes
-Labour Day,2023-05-01,,Yes
-Reconciliation Day,2023-05-29,17,Yes
-Western Australia Day,2023-06-05,24,Yes
-King's Birthday,2023-06-12,31,Yes
-Picnic Day,2023-08-07,87,Yes
-Labour Day,2023-10-02,143,Yes
-Christmas Day,2023-12-25,227,Yes
-St. Stephen's Day,2023-12-26,228,Yes
+Easter Monday,2023-04-10,,No
+Anzac Day,2023-04-25,,No
+May Day,2023-05-01,,No
+Labour Day,2023-05-01,,No
+Reconciliation Day,2023-05-29,17,No
+Western Australia Day,2023-06-05,24,No
+King's Birthday,2023-06-12,31,No
+Picnic Day,2023-08-07,87,No
+Labour Day,2023-10-02,143,No
+Christmas Day,2023-12-25,227,No
+St. Stephen's Day,2023-12-26,228,No

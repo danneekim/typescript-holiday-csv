@@ -53,13 +53,13 @@ async function createCSVFile() {
     const date = new Date(holiday.date);
     const timeDiff = date.getTime() - now.getTime();
     const daysUntil = Math.ceil(timeDiff / (1000 * 3600 * 24));
-    // TODO: calculate holiday falls on weekend
+    const dayOfWeek = date.getUTCDay();
 
     let row: HolidayDetails = {
       name: holiday.name,
       date: holiday.date,
       daysUntil: daysUntil > 0 ? daysUntil : "",
-      onWeekend: "Yes",
+      onWeekend: dayOfWeek === 0 || dayOfWeek === 6 ? "Yes" : "No",
     };
     return row;
   });
