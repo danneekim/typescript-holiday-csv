@@ -12,8 +12,6 @@ interface HolidayDetails extends Holiday {
 }
 
 const baseUrl = "https://date.nager.at/api/v3";
-const countryCode = "AU";
-const year = 2023;
 
 function getPublicHolidays(
   countryCode: string,
@@ -32,7 +30,6 @@ function getPublicHolidays(
           try {
             const holidays: Holiday[] = JSON.parse(data);
             resolve(holidays);
-            // console.log(holidays);
           } catch (error) {
             reject(error);
           }
@@ -45,8 +42,8 @@ function getPublicHolidays(
   });
 }
 
-async function createCSVFile() {
-  const holidays = await getPublicHolidays("AU");
+async function createCSVFile(countryCode: string) {
+  const holidays = await getPublicHolidays(countryCode);
 
   const holidayDetails: HolidayDetails[] = holidays.map((holiday) => {
     const now = new Date();
@@ -78,15 +75,15 @@ async function createCSVFile() {
   // stringify data
   const csvData: string = csvRows.map((row) => row.join(",")).join("\n");
   const folderPath = "csv/";
-  const fileName = "data.csv";
+  const fileName = `${countryCode}_holidays.csv`;
   const filePath = path.join(folderPath, fileName);
 
-  // create csv directory
+  // create directory
   fs.mkdir(folderPath, (error) => {
     if (error?.code === "EEXIST" || !error) {
-      console.log("Successfully created csv directory..\n");
+      console.log("Creating a csv directory...\n");
     } else {
-      console.error("Error creating csv directory..", error);
+      console.error("Error creating csv directory...", error);
     }
   });
 
@@ -99,4 +96,6 @@ async function createCSVFile() {
     }
   });
 }
-createCSVFile();
+
+const countryCode = "AU";
+createCSVFile(countryCode);
