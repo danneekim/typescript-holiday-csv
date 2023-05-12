@@ -2,9 +2,14 @@
   "name": "typescript-holiday-csv",
   "version": "1.0.0",
   "description": "This is a Typescript script that generates a CSV file listing all the public holidays in a country, using data from the public API at https://date.nager.at/.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "local": "mkdir -p dist && tsc && node dist/index.js"
   },
   "keywords": [],
   "author": "Dannee Kim",
