@@ -6,7 +6,7 @@ This is a Typescript script that generates a CSV file listing all the public hol
 
 - [x] Use only `typescript` and `@types/node`.
 - [x] Use Git.
-- [ ] Use API at https://date.nager.at/.
+- [x] Use API at https://date.nager.at/.
 - [ ] The script generates a CSV file listing public holidays of a country.
 - [ ] The CSV file includes 4 columns:
   - [ ] `Name:` - name of holiday
