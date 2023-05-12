@@ -13,7 +13,7 @@ interface HolidayDetails extends Holiday {
 
 const baseUrl = "https://date.nager.at/api/v3";
 
-function getPublicHolidays(
+export function getPublicHolidays(
   countryCode: string,
   year: number = new Date().getFullYear()
 ): Promise<Holiday[]> {
@@ -42,7 +42,7 @@ function getPublicHolidays(
   });
 }
 
-async function createCSVFile(countryCode: string) {
+export async function createCSVFile(countryCode: string) {
   const holidays = await getPublicHolidays(countryCode);
 
   const holidayDetails: HolidayDetails[] = holidays.map((holiday) => {

@@ -9,7 +9,9 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "local": "mkdir -p dist && tsc && node dist/index.js"
+    "build": "mkdir -p dist && tsc && node dist/index.js",
+    "build-test": "npm run build && cd ./dist && sudo npm link",
+    "main": "npm run build && npm publish"
   },
   "keywords": [],
   "author": "Dannee Kim",

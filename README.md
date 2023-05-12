@@ -7,13 +7,13 @@ This is a Typescript script that generates a CSV file listing all the public hol
 - [x] Use only `typescript` and `@types/node`.
 - [x] Use Git.
 - [x] Use API at https://date.nager.at/.
-- [ ] The script generates a CSV file listing public holidays of a country.
-- [ ] The CSV file includes 4 columns:
-  - [ ] `Name:` - name of holiday
-  - [ ] `Date:` - date of holiday
-  - [ ] `Days until:` - number of days for future holiday, blank if passed.
-  - [ ] `Weekend:` - "Yes" of "No" if holidays is on a weekend.
-- [ ] Code delivered as an npm project that runs with `npm run main`.
+- [x] The script generates a CSV file listing public holidays of a country.
+- [x] The CSV file includes 4 columns:
+  - [x] `Name:` - name of holiday
+  - [x] `Date:` - date of holiday
+  - [x] `Days until:` - number of days for future holiday, blank if passed.
+  - [x] `Weekend:` - "Yes" of "No" if holidays is on a weekend.
+- [x] Code delivered as an npm project that runs with `npm run main`.
 
 ## Extra Points
 
