@@ -52,14 +52,13 @@ async function createCSVFile() {
     const now = new Date();
     const date = new Date(holiday.date);
     const timeDiff = date.getTime() - now.getTime();
-
-    // TODO: calculate days until future holiday
+    const daysUntil = Math.ceil(timeDiff / (1000 * 3600 * 24));
     // TODO: calculate holiday falls on weekend
 
     let row: HolidayDetails = {
       name: holiday.name,
       date: holiday.date,
-      daysUntil: "",
+      daysUntil: daysUntil > 0 ? daysUntil : "",
       onWeekend: "Yes",
     };
     return row;
