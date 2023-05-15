@@ -38,7 +38,7 @@ All named functions and type interfaces can be imported:
 
 ## Running the Script
 
-To run the script, clone the repository and install the dependencies:
+To run the script ***locally***, clone the repository and install the dependencies:
 ```node
 git clone https://github.com/danneekim/typescript-holiday-csv.git
 cd typescript-holiday-csv
